@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Embryology: fertilization to birth</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E8EFEC;--sf:#fff;--tx:#10282B;--mu:#547074;--ln:#CBD9D5;--ec:#2F6FDE;--me:#D6403B;--en:#D9A400;--p0:#7C8F94;--p1:#0F766E;--p2:#7A5AC8;--ac:#10282B;--at:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1A1C;--sf:#142A2D;--tx:#E6F0EE;--mu:#92AEB1;--ln:#25403F;--ec:#6B9DFF;--me:#F27A75;--en:#F0C23A;--p0:#8FA3A8;--p1:#3FBFB2;--p2:#A68DEB;--ac:#E6F0EE;--at:#0C1A1C;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1A1C;--sf:#142A2D;--tx:#E6F0EE;--mu:#92AEB1;--ln:#25403F;--ec:#6B9DFF;--me:#F27A75;--en:#F0C23A;--p0:#8FA3A8;--p1:#3FBFB2;--p2:#A68DEB;--ac:#E6F0EE;--at:#0C1A1C;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.55 Newsreader,Georgia,serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3,button,.tab,.wk,th{font-family:Outfit,system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:12px 16px 56px}
+h1{font-size:1.9rem;line-height:1.1;margin:10px 0 4px;font-weight:800}
+h2{font-size:1.2rem;margin:22px 0 8px}
+.sub{color:var(--mu);margin:0 0 12px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:4px;padding:8px 16px;border-bottom:1px solid var(--ln);justify-content:center}
+.tab{border:0;background:none;color:var(--mu);padding:8px 14px;border-radius:20px;font-size:.95rem;font-weight:600;cursor:pointer}
+.tab[aria-selected=true]{background:var(--ac);color:var(--at)}
+section{display:none}section.show{display:block}
+.seg{display:inline-flex;border:1px solid var(--ln);border-radius:10px;overflow:hidden;margin:6px 0 4px}
+.seg button{border:0;background:var(--sf);color:var(--tx);padding:8px 14px;font-size:.92rem;cursor:pointer}
+.seg .on,.on{background:var(--ac)!important;color:var(--at)!important}
+.btn{border:1px solid var(--ln);background:var(--sf);color:var(--tx);border-radius:10px;padding:10px 16px;font-size:.95rem;cursor:pointer}
+.strip{display:flex;gap:6px;overflow-x:auto;padding:8px 2px 10px}.pill{flex:none;border:1px solid var(--ln);border-bottom:4px solid var(--p0);background:var(--sf);color:var(--tx);border-radius:10px;padding:6px 11px;font:600 .85rem Outfit,sans-serif;cursor:pointer}.pill.seen{background:var(--bg)}.pill.cur{background:var(--ac);color:var(--at)}
+.dial{display:block;width:100%;max-width:360px;margin:6px auto 0;touch-action:manipulation}
+.dial circle.s{cursor:pointer;stroke:var(--bg);stroke-width:3;transition:r .15s}
+.dial text{font-family:Outfit,sans-serif;fill:var(--tx);text-anchor:middle;pointer-events:none}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:14px;padding:16px 18px;margin:8px 0}
+.wk{font-weight:600;font-size:.9rem;display:flex;align-items:center;gap:8px;color:var(--mu)}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+.ph0{background:var(--p0)}.ph1{background:var(--p1)}.ph2{background:var(--p2)}.ec{background:var(--ec)}.me{background:var(--me)}.en{background:var(--en)}
+#st{font-size:1.5rem;margin:4px 0 6px;font-weight:800}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{font:600 .82rem Outfit,sans-serif;border:1px solid var(--ln);border-radius:14px;padding:3px 10px;display:flex;align-items:center;gap:6px}
+.nav2{display:flex;justify-content:space-between;gap:8px;margin-top:10px}
+.in{width:100%;font:inherit;font-size:.95rem;background:var(--bg);color:var(--tx);border:1px solid var(--ln);border-radius:10px;padding:10px;margin:4px 0}
+.fb{font-size:.95rem;margin-top:10px;white-space:pre-wrap}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+td,th{border-bottom:1px solid var(--ln);padding:8px 6px;text-align:left;vertical-align:top}
+.scroll{overflow-x:auto}.note{font-size:.85rem;color:var(--mu)}
+.bar{height:8px;background:var(--ln);border-radius:4px;overflow:hidden;margin-top:4px}.bar i{display:block;height:100%;background:var(--p1)}
+:focus-visible{outline:3px solid var(--ec);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<nav role="tablist" id="nav"></nav>
+<main>
+<section id="explore" class="show">
+<h1>From fertilization to birth</h1>
+<p class="sub">Follow development day by day through the first week, then week by week until birth. Tap a day or week, or drag the slider.</p>
+<div class="seg" id="lvl"><button class="on" data-l="A">Secondary school</button><button data-l="B">University</button></div>
+<div class="strip" id="strip" role="tablist" aria-label="Days and weeks"></div>
+<input type="range" id="sl" min="0" value="0" aria-label="Move through days and weeks" style="width:100%;accent-color:var(--p1)">
+<div class="card" aria-live="polite">
+<div class="wk"><span class="dot" id="pd"></span><span id="wk"></span></div>
+<h2 id="st"></h2><p id="tx" style="margin:0"></p><div class="chips" id="ch"></div>
+<div class="nav2"><button class="btn" id="pv">Previous</button><button class="btn" id="nx">Next</button></div>
+</div>
+<p class="note"><span class="dot ph0"></span> Weeks 1 and 2 · <span class="dot ph1"></span> Weeks 3 to 8 (embryonic) · <span class="dot ph2"></span> Week 9 onward (fetal). Term colours: <span class="dot ec"></span> ectoderm, <span class="dot me"></span> mesoderm, <span class="dot en"></span> endoderm. All timings are approximate and count from fertilization; add 2 weeks for gestational age. Verify against Langman, Moore and Larsen before teaching.</p>
+</section>
+
+<section id="class"><h1>Tutor and class</h1>
+<p class="sub" id="bst">Connecting…</p>
+<h2>Ask the tutor</h2>
+<div class="card"><textarea class="in" id="tq" rows="3" placeholder="Ask about any stage, for example why the neural tube closes in two places"></textarea><button class="btn" id="ask">Ask</button><div class="fb" id="ta"></div></div>
+<h2>Class progress</h2>
+<div class="card scroll" id="bd"><p class="note">No one has explored a stage yet.</p></div>
+<p class="note">Progress counts how many of the 44 days and weeks each student has opened. Names are visible to everyone with the link.</p>
+</section>
+
+<section id="plan"><h1>Editions and cost plan</h1>
+<p class="sub">Indicative planning estimates for a first run of 500 units. Replace with real supplier quotes.</p>
+<div class="scroll card"><table>
+<tr><th></th><th>Secondary</th><th>University</th></tr>
+<tr><td>Content</td><td>Simplified stages, large labels</td><td>Full detail, clinical links, advanced module</td></tr>
+<tr><td>Materials</td><td>Moulded plastic, laminated cards</td><td>Silicone, resin, 3D-printed parts</td></tr>
+<tr><td>Digital</td><td>Animations, flashcards</td><td>3D viewer, case studies</td></tr>
+<tr><td>Production cost</td><td>about US$70–110</td><td>about US$280–420</td></tr>
+<tr><td>Suggested price</td><td>about US$130–180</td><td>about US$480–650</td></tr>
+</table></div>
+<h2>Production steps</h2>
+<div class="card">1. Prototype the models and test with 10 classes.<br>2. Have two embryologists review the content.<br>3. Mould the high-volume parts and 3D-print the rest.<br>4. Pilot in schools and an anatomy department, then revise.<br>5. Sell one shared core, a low-cost school edition, and a university edition with add-on packs.</div>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const E=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let L='A',cur=0;
+// [title, detail, simple, terms]
+const DAYS=[
+["Fertilization","Fertilization occurs in the ampulla of the uterine tube, usually within 24 hours of ovulation. A capacitated sperm crosses the corona radiata, binds the zona pellucida and undergoes the acrosome reaction. Fusion triggers the cortical reaction, which blocks other sperm, and the oocyte finishes meiosis II and releases the second polar body.","One sperm swims through the layers around the egg and enters it. The egg then changes so no other sperm can get in. It finishes its last division, and the male and female nuclei sit side by side.",["Capacitation","Acrosome reaction","Cortical reaction","Polar body"]],
+["Zygote and first division","The male and female pronuclei fuse (syngamy), restoring 46 chromosomes and fixing genetic sex: an X-bearing sperm gives a female, a Y-bearing sperm a male. The first mitotic division begins about 30 hours after fertilization and produces two blastomeres.","The two nuclei join into one cell, the zygote, with 46 chromosomes. It holds all the genes of the new person, including whether it will be a girl or a boy. Then it splits in two.",["Syngamy","Zygote","46 chromosomes"]],
+["Cleavage: 2 to 4 cells","Cleavage divisions are rapid mitoses without growth, so each blastomere is smaller than the last. All cells stay inside the zona pellucida. Cilia and gentle muscle contractions carry the embryo along the uterine tube towards the uterus.","The cell keeps dividing into 2, then 4 cells, each smaller than before. They stay inside a protective shell while the tube gently carries them to the uterus.",["Blastomeres","Zona pellucida"]],
+["Morula","At the 8-cell stage the blastomeres flatten against each other in compaction and form tight junctions. By about 12 to 16 cells the embryo is a solid ball, the morula. Outer cells will form trophoblast and inner cells the inner cell mass. It enters the uterus around days 3 to 4.","The cells squeeze together into a solid ball, like a tiny mulberry. Cells on the outside and inside start to take on different jobs.",["Compaction","Tight junctions","Morula"]],
+["Early blastocyst","Fluid enters the morula through the zona pellucida and the spaces between cells merge into the blastocyst cavity. The inner cell mass gathers at the embryonic pole and the outer cells form the trophoblast. The embryo floats free in uterine secretions.","Fluid fills the middle of the ball and makes a hollow space. One cluster of cells will become the baby, and the outer layer will help form the placenta.",["Blastocyst cavity","Inner cell mass","Trophoblast"]],
+["Hatching blastocyst","The blastocyst sheds the zona pellucida (hatching) so the trophoblast can contact the endometrium. The endometrium is in its secretory phase, with a short window of receptivity about 6 to 10 days after ovulation.","The embryo breaks out of its shell. Now it can touch the lining of the uterus, which is ready to receive it.",["Hatching","Secretory endometrium"]],
+["Implantation begins","The polar trophoblast attaches to the endometrial epithelium. The trophoblast differentiates into inner cytotrophoblast and outer invasive syncytiotrophoblast, a multinucleate mass that erodes into the endometrium. hCG secretion begins and will maintain the corpus luteum.","The ball attaches to the wall of the uterus and starts to dig in. Its outer cells make a hormone, hCG, that tells the body to keep the pregnancy going.",["Syncytiotrophoblast","Cytotrophoblast","hCG"]]];
+const WK={
+2:["Bilaminar disc and implantation","Day 7: the hypoblast forms. Day 8: epiblast cells form the amniotic cavity. By days 9 to 10 lacunae appear in the syncytiotrophoblast and the primary yolk sac forms. Extraembryonic mesoderm and the chorionic cavity develop by days 11 to 12 and the blastocyst is fully embedded. By day 13 primary chorionic villi form and uteroplacental blood flow begins.","The embryo is a flat disc of two layers between two fluid-filled sacs, the amniotic sac and the yolk sac. It is fully buried in the uterus wall and the first tiny placenta projections appear.",["Epiblast","Hypoblast","Amniotic cavity","Primary yolk sac","Primary villi"]],
+3:["Gastrulation","The primitive streak appears about day 15. Epiblast cells ingress to form definitive endoderm, then intraembryonic mesoderm, and the epiblast that remains is ectoderm. The notochordal process forms along the midline and the notochord induces the neural plate (about day 18). Somites begin about day 20 and tertiary villi with fetal vessels develop by day 21. The first missed period is expected.","Cells move inward through a groove called the primitive streak and sort into three layers. A rod called the notochord forms, the nervous system starts as a flat plate, and blocks called somites appear.",["Primitive streak","ec:Ectoderm","me:Mesoderm","en:Endoderm","Notochord","ec:Neural plate","me:Somites"]],
+4:["Neural tube and body folding","The neural folds fuse. The anterior neuropore closes about day 25 and the posterior about day 27. Folding turns the flat disc into a C-shaped cylinder and encloses the gut tube. The heart tube beats by days 22 to 23. Pharyngeal arches, optic and otic structures and limb buds (upper first, about days 26 to 27) appear. Length is about 4 mm.","The flat plate closes into a tube that becomes the brain and spinal cord. The disc curls into a body shape, the heart starts to beat and arm buds appear. The embryo is about 4 mm long.",["ec:Neuropores","ec:Neural crest","me:Heart tube","Pharyngeal arches","me:Limb buds"]],
+5:["Brain, lungs and heart septation","The brain divides into five secondary vesicles. Hand plates form at the ends of the upper limb buds. The lung buds branch into bronchi and the heart starts septation of the atria, ventricles and outflow tract. The mesonephros acts as a temporary kidney while the metanephros begins to form.","The brain grows fast and splits into five parts. Hands appear as flat paddles, the lungs begin to branch like a tree and the heart starts to divide into chambers.",["ec:Brain vesicles","en:Lung bud","me:Heart septation","me:Mesonephros"]],
+6:["Fingers, ears and palate shelves","Digital rays appear on the hand plates. Auricular hillocks form the external ear. Palatal shelves grow downward beside the tongue and the primary palate is complete. The midgut herniates into the umbilical cord. The urorectal septum divides the cloaca.","Finger shapes appear as ridges on the hands and the ears begin to form. Part of the gut grows out into the umbilical cord because the belly is too small for it.",["me:Digital rays","Palatal shelves","Physiological herniation"]],
+7:["Digits separate","Apoptosis in the tissue between the digits separates the fingers, then the toes. Eyelids begin to form and the tail regresses. In XY embryos the SRY gene drives testis cord differentiation. Elbows and knees are visible.","Fingers and then toes separate as the cells between them die in a planned way. Eyelids begin to grow, and in boys the testes begin to form.",["Apoptosis","SRY gene","Testis cords"]],
+8:["End of the embryonic period","All major organ systems are established. The face looks human, the head is about half the body length and the embryo is about 30 mm long. Primary ossification begins. The period of highest risk for major structural malformations ends, though the CNS, eyes, ears, teeth and genitalia stay vulnerable.","All the main organs are in place. The tiny baby has a face, fingers, toes and eyelids. From now on it is called a fetus and mostly grows and matures.",["Teratogen window","me:Ossification"]],
+9:["Fetal period begins","The head is still about half the crown-rump length. The palatal shelves turn horizontal and begin to fuse. The liver is the main site of blood formation. The eyelids fuse closed and the external genitalia are still in the indifferent state.","The baby grows quickly and the head is still very large. The roof of the mouth begins to close and the eyelids fuse shut to protect the eyes.",["Palatal fusion","Hepatic haematopoiesis"]],
+10:["Gut returns; movement begins","Intestinal loops return to the abdomen from the umbilical cord and rotate. The kidneys begin to make urine, which enters the amniotic fluid. Movements start but are too slight to feel. Differentiation of the external genitalia begins under androgen control.","The gut moves back inside the belly and the kidneys start making urine. The baby moves, but too gently to be felt.",["Midgut rotation","Fetal urine"]],
+11:["Organs settle","Return of the gut is complete. The liver secretes bile, the fetus swallows amniotic fluid and the neck lengthens as the head lifts. Ossification centres spread through the skull and limbs.","The organs settle into place and the neck forms. The baby swallows fluid and its bones begin to harden.",["Bile","Swallowing"]],
+12:["Palate complete; sex visible","The secondary palate has fused by about week 12. The external genitalia show male or female form. The spleen and bone marrow join the liver in blood formation and reflexes such as sucking develop. The heartbeat is audible with Doppler.","The mouth roof is fully closed and the outside genitals look male or female. The baby can open and close its fingers and suck.",["Secondary palate","External genitalia"]],
+13:["Skeleton and kidneys","Ossification spreads and the skeleton shows on ultrasound. The fetus produces urine and swallows amniotic fluid, which cycles the fluid. Limbs approach final relative proportions.","Bones keep hardening. The baby swallows and passes fluid and its arms and legs near their final proportions.",["Ossification"]],
+14:["Hair pattern and ovaries","The scalp hair pattern is set and the lower limbs lengthen. In females the ovaries contain primordial follicles. Limb movements become coordinated.","Hair patterns form on the scalp and the legs grow longer. The baby moves its arms and legs in a coordinated way.",["Primordial follicles"]],
+15:["Breathing movements","Breathing movements begin and move amniotic fluid in and out of the developing lungs, which supports lung growth. The skeleton is clearly visible on X-ray and the eyes face forward.","The baby practises breathing movements with fluid, and its eyes move to the front of the face.",["Fetal breathing movements"]],
+16:["Quickening","The limbs are well proportioned and sex is clear on ultrasound. Quickening, the mother’s first sensation of movement, may begin between weeks 16 and 20, often earlier in later pregnancies.","The baby moves enough that a mother may start to feel it, often like flutters.",["Quickening"]],
+17:["Fat and lanugo","Brown fat begins to form to help heat production at birth. Fine lanugo hair covers the body. Growth is rapid and muscles strengthen.","Fine soft hair grows over the body, and a special fat forms that will keep the baby warm after birth.",["Brown fat","Lanugo"]],
+18:["Genital tract and nerves","The uterus is formed in females and the vagina begins to canalise. In males the testes begin to descend. Myelination of the spinal cord is under way.","Reproductive organs mature. Spinal nerves get a fatty coating that speeds up their signals.",["Myelination"]],
+19:["Vernix","Vernix caseosa, a waxy mix of sebum and shed cells, covers the skin and protects it from amniotic fluid. The inner ear structures are mature.","A waxy coat protects the skin from the fluid. The baby can start to hear sounds from outside.",["Vernix caseosa"]],
+20:["Halfway","Eyebrows and head hair are visible. The fetal heartbeat can be heard with a stethoscope. Cortical layering of the brain is advancing.","The baby has eyebrows and hair. A doctor can listen to the heartbeat with a stethoscope.",["Cortical layering"]],
+21:["Eye movements and blood","Rapid eye movements begin and bone marrow becomes a major site of blood formation. The lungs are in the canalicular stage, with capillaries growing close to the airways.","The eyes start to move under the lids, and the bones now make blood cells.",["Canalicular stage"]],
+22:["Skin and lungs","The skin is red and wrinkled with little fat. Respiratory bronchioles and terminal air spaces develop, but gas exchange is not yet possible without help.","The skin looks thin and red. The lungs are forming air spaces but cannot yet work on their own.",["Respiratory bronchioles"]],
+23:["Senses","Taste buds develop and the fetus responds to loud sound and light with startle movements.","The baby can react to loud sounds and bright light.",["Startle response"]],
+24:["Surfactant begins","Type II pneumocytes begin secreting surfactant around weeks 24 to 26, lowering surface tension in the alveoli. Survival with intensive care becomes possible from about this time.","The lungs begin to make a slippery substance that keeps the air sacs open. With intensive care, a baby born now may survive.",["en:Surfactant","Type II pneumocytes"]],
+25:["Terminal sacs","Terminal sacs (primitive alveoli) multiply and capillaries move closer to the lining, improving the prospect of gas exchange.","More air sacs form in the lungs, so breathing becomes more possible.",["Terminal sacs"]],
+26:["Eyes open","The eyelids separate and the eyes open. The CNS can direct rhythmic breathing and temperature control, though both are still immature.","The eyelids open. The brain can start to control breathing and temperature, but not yet reliably.",["Eyelid separation"]],
+27:["Brain growth","The cerebral cortex develops gyri and sulci and the brain grows rapidly. Sleep and wake cycles begin to appear.","The brain surface starts folding to fit in more cells. The baby has sleep and wake times.",["ec:Gyri and sulci"]],
+28:["Fat deposition","Subcutaneous fat accumulates and smooths the skin. The bone marrow and spleen form blood while the liver’s role declines.","The baby gets plumper as fat builds up under the skin.",["Subcutaneous fat"]],
+29:["Surfactant rising","Surfactant production increases and improves lung compliance. The pupillary light reflex appears.","The lungs make more of the slippery substance. The pupils begin to react to light.",["en:Surfactant"]],
+30:["Testes descend","In males the testes descend through the inguinal canal towards the scrotum, reaching it in the last weeks. Fat stores and body weight keep rising.","In boys, the testes move down toward the scrotum.",["Inguinal canal"]],
+31:["Nervous system matures","Myelination progresses and the fetus has regular sleep cycles and responds to touch.","Nerves get more coating and the baby sleeps in regular cycles.",["Myelination"]],
+32:["Weight gain","Weight gain is rapid, and iron, calcium and fat stores are laid down, with much of the calcium transferred in the last trimester.","The baby gains weight quickly and stores iron and calcium.",["Iron and calcium stores"]],
+33:["Head down","Most fetuses settle in a cephalic (head-down) position as the uterus fits more snugly. The skin becomes smooth and pink.","Most babies turn head-down, ready for birth.",["Cephalic presentation"]],
+34:["Lung maturation","Alveoli and surfactant keep maturing. Babies born from about now usually survive well, though some need breathing support.","The lungs keep maturing. Babies born now usually do well, sometimes with breathing help.",["Alveoli"]],
+35:["Reflexes","Lanugo is mostly shed, nails reach the fingertips and the sucking and grasp reflexes are strong.","The baby has strong sucking and grasping reflexes.",["Sucking reflex"]],
+36:["Engagement and antibodies","The head may descend into the pelvis (lightening). The mother passes IgG antibodies across the placenta, giving passive immunity.","The baby may drop lower into the pelvis. Antibodies from the mother cross the placenta to protect it.",["IgG","Lightening"]],
+37:["Full growth","The fetus is near term with fat stores, well-developed lungs and a brainstem mature enough to drive breathing. Growth slows as the placenta reaches its limit.","The baby is nearly fully grown and its body is ready for life outside.",["Term readiness"]],
+38:["Term and birth","Term is 38 weeks after fertilization (40 weeks gestational age) and labour begins. After birth the lungs fill with air, pulmonary resistance falls, and the foramen ovale and ductus arteriosus close functionally within hours to days. The ductus venosus closes in the first days. Placental support ends.","The baby is born and takes its first breath. The blood vessels used in the womb close so the lungs take over from the placenta.",["Foramen ovale","Ductus arteriosus","Ductus venosus"]]};
+const S=[];
+DAYS.forEach((d,i)=>S.push({p:'D'+i,w:'Week 1 · Day '+i,t:d[0],b:d[1],a:d[2],c:d[3],h:0}));
+for(let n=2;n<=38;n++){const d=WK[n];S.push({p:'W'+n,w:`Week ${n} · days ${7*(n-1)} to ${7*n-1}`,t:d[0],b:d[1],a:d[2],c:d[3],h:n<3?0:n<9?1:2})}
+const N=S.length,ex=new Set();
+$('#strip').innerHTML=S.map((s,i)=>`<button class="pill" role="tab" data-i="${i}" style="border-bottom-color:var(--p${s.h})">${s.p}</button>`).join('');
+$$('#strip .pill').forEach(b=>b.onclick=()=>show(+b.dataset.i));
+$('#sl').max=N-1;$('#sl').oninput=e=>show(+e.target.value);
+function show(i){cur=Math.max(0,Math.min(N-1,i));const s=S[cur];
+$$('#strip .pill').forEach((b,k)=>{b.classList.toggle('cur',k==cur);b.classList.toggle('seen',ex.has(k));b.setAttribute('aria-selected',k==cur)});
+const pc=$$('#strip .pill')[cur];if(pc)pc.scrollIntoView({inline:'center',block:'nearest'});
+$('#sl').value=cur;$('#pd').className='dot ph'+s.h;$('#wk').textContent=s.w;$('#st').textContent=s.t;
+$('#tx').textContent=L=='A'?s.a:s.b;
+$('#ch').innerHTML=s.c.map(t=>{const p=t.split(':');const k=p.length>1?p[0]:'';return `<span class="chip">${k?`<span class="dot ${k}"></span>`:''}${E(p[p.length-1])}</span>`}).join('');
+$('#pv').disabled=cur==0;$('#nx').disabled=cur==N-1;
+if(!ex.has(cur)){ex.add(cur);save()}}
+$('#pv').onclick=()=>show(cur-1);$('#nx').onclick=()=>show(cur+1);
+$$('#lvl button').forEach(b=>b.onclick=()=>{$$('#lvl button').forEach(x=>x.classList.remove('on'));b.classList.add('on');L=b.dataset.l;show(cur)});
+// back end
+let db,usr,uid;
+async function save(){if(!db||!uid)return;try{await db.doc('scores/'+uid).set({ex:[...ex],t:Date.now()})}catch(e){$('#bst').textContent='Could not save progress ('+(e.code||'error')+').'}}
+function board(rows){$('#bd').innerHTML=rows.length?'<table><tr><th>Student</th><th>Days and weeks opened</th></tr>'+rows.map(r=>`<tr><td>${E(r.n)}${r.id==uid?' (you)':''}</td><td>${r.c} of ${N}<div class="bar"><i style="width:${Math.round(100*r.c/N)}%"></i></div></td></tr>`).join('')+'</table>':'<p class="note">No one has explored a stage yet.</p>'}
+async function init(){
+try{if(typeof claude!='undefined'){usr=await claude.use('user');db=await claude.use('db')}}catch(e){}
+if(!usr||!db){$('#bst').textContent='Offline mode. Open this page signed in to claude.ai to save progress and see your class.';return}
+uid=await usr.id();
+try{const s=await db.doc('scores/'+uid).get();if(s.exists&&Array.isArray(s.data().ex)){s.data().ex.forEach(k=>ex.add(k));show(cur)}}catch(e){}
+$('#bst').textContent='Your progress saves automatically.';save();
+db.collection('scores').onSnapshot(async sn=>{const rows=sn.docs.map(d=>({id:d.id,c:(d.data().ex||[]).length}));let pf={};try{pf=await usr.profiles(rows.map(r=>r.id))}catch(e){}
+rows.forEach(r=>r.n=(pf[r.id]&&pf[r.id].name)||'Someone');rows.sort((a,b)=>b.c-a.c);board(rows)},()=>{})}
+const STOP=new Set(['the','and','what','why','how','does','when','are','for','with','that','this','from','about','which','can','did','has','have','was','were','you','not','happen','happens']);
+function localAnswer(q){const k=(q.toLowerCase().match(/[a-z]{3,}/g)||[]).filter(x=>!STOP.has(x));if(!k.length)return null;
+const r=S.map((s,i)=>{const key=(s.t+' '+s.c.join(' ')).toLowerCase(),all=(key+' '+s.b+' '+s.w).toLowerCase();let n=0;k.forEach(x=>{if(key.includes(x))n+=3;else if(all.includes(x))n+=1});return[n,i]}).filter(x=>x[0]>0).sort((a,b)=>b[0]-a[0]).slice(0,2);
+return r.length?r.map(([n,i])=>{const s=S[i];return s.w+': '+s.t+'\n'+(L=='A'?s.a:s.b)}).join('\n\n'):null}
+function fb(q,o,why){const a=localAnswer(q);o.textContent=a?why+' Here is what the timeline says:\n\n'+a:why+' No timeline entry matched. Try words like neural tube, implantation or surfactant.'}
+$('#ask').onclick=async()=>{const t=$('#tq').value.trim(),o=$('#ta');if(!t)return;o.textContent='Thinking…';
+try{const sm=await claude.use('sample');if(!sm){return fb(q,o,'The AI tutor is not available here.')}
+const r=await sm('You are an embryology tutor for '+(L=='A'?'secondary school students, so use simple words':'university anatomy and medical students, so use standard terminology')+'. Be accurate to Langman, Moore and Larsen, answer in under 150 words, and do not give personal medical advice. Student question: '+t,{modelTier:'quick',cache:false,onText:({text})=>{o.textContent=text}});o.textContent=r.text}
+catch(e){fb(q,o,e&&e.code=='not_granted'?'Permission was declined.':'The AI tutor could not answer right now.')}};
+// tabs
+const T=[["explore","Explore"],["class","Tutor"],["plan","Plan"]];
+$('#nav').innerHTML=T.map(t=>`<button class="tab" role="tab" data-t="${t[0]}">${t[1]}</button>`).join('');
+function go(id){if(!T.some(t=>t[0]==id))id='explore';$$('section').forEach(s=>s.classList.toggle('show',s.id==id));$$('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.t==id))}
+$$('.tab').forEach(b=>b.onclick=()=>{location.hash=b.dataset.t;go(b.dataset.t);scrollTo(0,0)});
+addEventListener('hashchange',()=>go(location.hash.slice(1)));
+go(location.hash.slice(1));show(0);init();
+</script></body></html>
